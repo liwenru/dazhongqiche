@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- 1. 添加meta:vp -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<!-- 2. 引入css -->
+	<link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+<!-- <div id="mask">
+        <p>0%</p>
+</div> -->
+	<div class="swiper-container">
+	   <img src="img/logo.png">
+        <div class="swiper-wrapper ">
+        <!-- 第一页 -->
+            <div class="swiper-slide slide1">
+            <img src="img/bg1.png">
+            <img src="img/bg11.png" class="ani" swiper-animate-effect="swing" swiper-animate-duration="1s">
+            <img src="img/car.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+            
+            <p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.8s" swiper-animate-delay="0.6s">剑拨弩张的对峙，更是英雄相惜的的跃跃欲试。</br>驭见高尔夫R-Line，遇见另一个自己</p>
+            </div>
+            <!-- 第二页 -->
+            <div class="swiper-slide slide2">
+            	<img src="img/bg21.png" class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s">
+            	<img src="img/bg2.jpg">
+            	<img src="img/car2.png" class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+            	<p class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">设计动感入微，静观已澎湃。<br>锋芒展露的前大灯与犀利尾翼相呼应<br>匹配你的运动气质，<br>有如为你量身定制的福特<br><span>R-Line标识，</span><br>是你不甘于常规的鲜明印记；<br>更配备精致<span>17寸铝轮毂，</span><br>与你一同丈量世界</p>
+            </div>
+            <!-- 第三页 -->
+            <div class="swiper-slide slide3">
+                <img src="img/bg31.png" class="ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="1s">
+                <img src="img/bg3.jpg" alt="">
+                <img src="img/fa.png" class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.6s">
+                <p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="1s">动感要放肆，而环保要克制。<br>搭载<span>1.4TSI</span>发动机带来二淋漓快感，<br>满足你释放身心的渴望；</br>配合<span>手自一体DSG</span>双离合自动变速器，</br>领先科技更让动力与节能收放自如；</br>多功能运动向盘，更多选择触发无限可能</p>
+            </div>
+            <!-- 第四页 -->
+            <div class="swiper-slide slide4">
+                <img src="img/bg41.jpg" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s">
+                <img src="img/bg4.jpg" alt="">
+                <img src="img/bg4_1.png"  class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">
+                <img src="img/bg4_2.png"  class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+                <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s">品位不拘泥于形式美学，</br>更将感官体验全面深化。</br><span>
+                全新酷热内饰，</span>运动风范一览无余；</br><span>双色电加热座椅，</span>真皮质感匹配创新科技，</br>养眼更暖心；每一细微之处，</br>皆是视觉与触感的双重满足，</br>面面俱到的享受</p>
+            </div> 
+            <!-- 第五页 -->
+            <div class="swiper-slide slide5">
+                <img src="img/bg51.png" class="ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="1s">
+                <img src="img/button.png" class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s" >
+                <img src="img/bg5.png" alt="">
+                <img src="img/car5.png" class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="1s" swiper-animate-delay="0.5s">
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 3. 引入js -->
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<!-- 4. 创建类 -->
+<script>
+    // preLoad();
+    var swiper = new Swiper('.swiper-container', {
+        paginationClickable: true,		//点击小按钮切换图片
+        direction:"vertical", 		    //改变tab切换方向（垂直）
+         onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+          swiperAnimateCache(swiper); //隐藏动画元素 
+          swiperAnimate(swiper); //初始化完成开始动画
+         }, 
+        onSlideChangeEnd: function(swiper){ 
+          swiperAnimate(swiper); //      每个slide切换结束时也运行当前slide动画
+        } 
+        }) 
+
+    // function preLoad(){
+    //     // 预加载
+    // // 得到所有的图片
+    // var imgs = document.getElementsByTagName("img");
+    // // 得到遮罩层元素
+    // var mask = document.getElementById("mask");
+    // // 得到p元素
+    // var p = mask.getElementsByTagName("p")[0];
+    // // 得到body
+    // var body = document.getElementsByTagName("body")[0];
+
+    // // 百分比
+    // var percent = 0;
+    // // 表示已经加载了多少张图片
+    // var num = 0;
+
+    // for(var i = 0; i < imgs.length; i++){
+    //     // 创建图片对象
+    //     var img = new Image();
+    //     // 赋予地址
+    //     img.src = imgs[i].src;
+    //     // img.onload,当图片加载完后执行function方法
+    //     img.onload = function(){
+    //         num++;
+    //         // 计算百分比
+    //         percent = parseInt((num / imgs.length)*100);
+    //         // 改变p里面的值
+    //         p.innerText = percent + "%";
+    //         alert(percent);
+
+    //         // 判断是否加载完所有图片
+    //         if(num == imgs.length){
+    //             mask.style.display = "none";
+    //             body.style.overflow = "auto";
+    //         }
+    //     }
+    // }
+    // }
+    
+ </script>
+</html>

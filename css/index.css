@@ -1,0 +1,248 @@
+body,h1,h2,h3,h4,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin: 0;padding: 0;}
+em{font-style: normal;}
+li{list-style: none;}
+a{text-decoration: none;}
+img{border: none;vertical-align: top;}
+table{border-collapse: collapse;}
+input,textarea{outline: none;}
+textarea{resize:none;overflow: auto;}
+body{font-size:12px;font-family: arial;}
+
+html,body,.swiper-container{
+	width: 100%;
+	height: 100%;
+}
+@font-face {
+font-family: 'Kaushan Script';
+src: url('KaushanScript-Regular.eot');
+src: url('KaushanScript-Regular.eot?#iefix') format('embedded-opentype'),
+	
+font-weight: normal;
+font-style: normal;
+}
+.swiper-container>img{
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 6%;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+}
+body{
+
+overflow: hidden;
+}
+/*预加载*/
+
+#mask{
+	width: 100%;
+	height: 100%;
+	/*background-color: rgba(120,120,118,0.5);*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*z-index: 200;*/
+}
+#mask p{
+	text-align: center;
+	height: 64px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	color: black;
+	font-size: 4em;
+	z-index: 200;
+}
+/*第一页*/
+
+.slide1,.slide2,.slide3,.slide4,.slide5{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.slide1 img:nth-child(1){
+	width: 100%;
+	height: 100%;
+	/*border: 1px solid black;*/
+}
+.slide1 img:nth-child(2){
+	width: 72%;
+    position: absolute;
+    left: 2%;
+    top: 6%;
+    /*border: 1px solid black;*/
+
+}
+.slide1 img:nth-child(3){
+	position: absolute;
+	left: 0;
+	top: 66%;
+    width: 88%;
+
+}
+.slide1 img:nth-child(4){
+	position: absolute;
+    left: 44%;
+    top: 74%;
+    width: 16%;
+}
+
+.slide1 p,.slide4 p{
+	position: absolute;
+	position: absolute;
+    left: 0;
+    top: 30%;
+    font-family: Kaushan Script;
+    font-size: 16px;
+     color: rgb(120,120,118);
+}
+
+
+/*第二页*/
+.slide2{
+	/*background-color: blue;*/
+}
+.slide2 img:nth-child(1){
+	position: absolute;
+	left: 0;
+	top: 16%;
+    width: 70%;
+    z-index: 100;
+    /*border: 1px solid black;*/
+}
+.slide2 img:nth-child(2){
+	position: absolute;
+	right: 0;
+	bottom: 0;
+    width: 60%;
+    height: 80%;
+    /*border: 1px solid black;*/
+}
+.slide2 img:nth-child(3){
+	position: absolute;
+	right: 0;
+	bottom: 4%;
+    width: 76%;
+    z-index: 100;
+    /*border: 1px solid black;*/
+}
+.slide2 p{
+	position: absolute;
+	left: 0;
+	top: 39%;
+	font-family: Kaushan Script;
+    font-size: 14px;
+    color: rgb(120,120,118);
+}
+.slide2 p span,.slide3 p span,.slide4 p span{
+	color: rgb(140,84,44);
+	 font-size: 18px;
+
+}
+/*第三页*/
+.slide3{
+	/*background-color: yellow;*/
+}
+.slide3 img:nth-child(1){
+	position: absolute;
+	right: 0;
+	top: 10%;
+    width: 70%;
+    z-index: 100;
+}
+.slide3 img:nth-child(2){
+	position: absolute;
+	right: 0;
+	bottom: 0;
+    width: 92%;
+    height: 550px;
+}
+.slide3 img:nth-child(3){
+	position: absolute;
+	left: 0;
+	bottom: 3%;
+    width: 55%;
+
+}
+.slide3 p{
+	position: absolute;
+    right: 0;
+    text-align: right;
+    top: 29%;
+    font-family: Kaushan Script;
+    font-size: 14px;
+    color: rgb(120,120,118);
+}
+
+
+
+/*第四页*/
+.slide4{
+	/*background-color: orange;*/
+}
+.slide4 img:nth-child(1){
+	position: absolute;
+	left: 0;
+	top: 10%;
+    width: 85%;
+    z-index: 100;
+}
+.slide4 img:nth-child(2){
+	position: absolute;
+	bottom: 0;
+    width: 100%;
+    /*z-index: 100;*/
+}
+.slide4 img:nth-child(3){
+	position: absolute;
+	right: 5%;
+	top: 80%;
+    width: 40%;
+    z-index: 100;
+
+}
+.slide4 img:nth-child(4){
+	position: absolute;
+	left: 5%;
+	top: 66%;
+    width: 40%;
+    z-index: 100;
+
+}
+/*第五页*/
+.slide5{
+	/*background-color: pink;*/
+}
+.slide5 img:nth-child(1){
+	position: absolute;
+	left: 0;
+	top: 10%;
+    width: 85%;
+    z-index: 100;
+}
+.slide5 img:nth-child(2){
+	position: absolute;
+	right: 0;
+	top: 30%;
+    width: 55%;
+    z-index: 100;
+}
+.slide5 img:nth-child(3){
+	position: absolute;
+	right: 0;
+	top: 12%;
+    width: 100%;
+    /*z-index: 100;*/
+}
+.slide5 img:nth-child(4){
+	position: absolute;
+	left: 0;
+	bottom: 10%;
+    width: 100%;
+    z-index: 100;
+}
